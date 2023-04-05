@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Link } from 'react-router-dom';
+import { setFavoritosStorage, esFavorito } from "../Components/utils/metodosLocalStorage";
 
 
 
@@ -8,6 +9,12 @@ const Card = ({ name, username, id }) => {
 
   const addFav = ()=>{
     // Aqui iria la logica para agregar la Card en el localStorage
+    if (esFavorito(id)) {
+      alert(`${name} ya está en favoritos`);
+    } else {
+      const odontologoFav = { name, username, id };
+      setFavoritosStorage(odontologoFav);
+    }
   }
 
   return (
