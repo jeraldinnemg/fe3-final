@@ -19,6 +19,10 @@ code {
   cursor: pointer;
 }
 
+.favButton:hover{
+  background-color: rgb(52, 90, 216);;
+}
+
 h1{
   text-align: center;
 }
@@ -34,6 +38,7 @@ nav{
   width: 80vw;
   justify-content: flex-start;
   padding: 1rem;
+  gap:20px;
 }
 
 a{
@@ -45,6 +50,11 @@ a{
 a:hover{
   color: rgb(136, 136, 136);
 } 
+
+.menu{
+  display: flex;
+  gap:20px;
+}
 
 footer {
   display: flex;
@@ -100,8 +110,13 @@ input::placeholder {
   flex-direction: column;
   align-items: center;
   width: 200px;
+  height: 100%;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
+}
+
+.card h2 {
+  text-align: center;
 }
 
 .card:hover{
@@ -117,6 +132,7 @@ input::placeholder {
   flex-wrap: wrap;
   margin: 0 auto;
 }
+
 
 table {
  border-collapse: collapse;
@@ -141,13 +157,7 @@ tr:nth-child(even) {
   background-color: #12121296;
   color: white;
 }
-.dark > a {
-  color: white;
-}
 
-.light {
-  background-color: white;
-}
 
 /* <------ */ /* HEADER */ /* ------> */
 
@@ -165,6 +175,7 @@ tr:nth-child(even) {
 .nav-item-title{
   justify-content: start;
   font-size: 1.5rem;
+  white-space: nowrap;
 }
 
 .nav-item-title span{
@@ -183,7 +194,20 @@ nav{
 }
 
 .app-theme.dark {
-
-  background-color: #212121;
+  background-color: #5e5e5e;
   color: #f5f5f5;
+}
+
+.app-theme.dark .card{
+  border: 0.5px solid rgb(192, 192, 192);
+  color: #f5f5f5;
+}
+
+.app-theme.dark .nav-container{
+  background-color: #000000;
+}
+
+
+.app-theme.dark a{
+  color: #fff;
 }
