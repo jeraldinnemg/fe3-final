@@ -1,8 +1,7 @@
 
 import React from "react";
 import { Link } from 'react-router-dom';
-import { setFavoritosStorage, esFavorito } from "../Components/utils/metodosLocalStorage";
-
+import { setFavoritosStorage, eliminarDeFavorito, esFavorito} from "../Components/utils/metodosLocalStorage";
 
 
 const Card = ({ name, username, id }) => {
@@ -10,7 +9,7 @@ const Card = ({ name, username, id }) => {
   const addFav = ()=>{
     // Aqui iria la logica para agregar la Card en el localStorage
     if (esFavorito(id)) {
-      alert(`${name} ya está en favoritos`);
+      eliminarDeFavorito(id, name);
     } else {
       const odontologoFav = { name, username, id };
       setFavoritosStorage(odontologoFav);
@@ -35,8 +34,8 @@ const Card = ({ name, username, id }) => {
         <h3>
           {id}
         </h3>
-        <button onClick={addFav} className="favButton">Add fav</button>
-    
+        <button onClick={addFav} className="favButton" >{esFavorito(id) ? "⭐️" : "✩"}</button>
+
     </div>
     </Link>
   );

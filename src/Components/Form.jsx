@@ -44,13 +44,14 @@ const Form = () => {
   return (
     <div className="form-container">
       <h2>Formulario de contacto</h2>
-      <form className="form" onSubmit={enviarForm}>
-        <div className="form-group">
+      <form  onSubmit={enviarForm}>
+        <div >
           <label htmlFor="nombre">Nombre completo</label>
           <input
             type="text"
             id="nombre"
             name="nombre"
+            placeholder= "Nombre"
             value={values.nombre}
             onChange={handleChange}
           />
@@ -62,6 +63,7 @@ const Form = () => {
             type="email"
             id="email"
             name="email"
+            placeholder ="Mail"
             value={values.email}
             onChange={handleChange}
           />
