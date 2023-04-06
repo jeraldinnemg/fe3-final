@@ -1,3 +1,5 @@
+/* <------ */ /* GENERAL */ /* ------> */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,16 +13,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.favButton{
-  background-color: rgba(136, 136, 136, 0.116);
-  padding: 10px;
-  border: none;
-  width: 100%;
-  cursor: pointer;
+
+/* <------ */ /* HEADER */ /* ------> */
+
+.nav-container{
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20vw;
+  position: sticky;
+  top: 0;
+  gap:400px;
 }
 
-.favButton:hover{
-  background-color: rgb(52, 90, 216);;
+.nav-item-title{
+  justify-content: start;
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+.nav-item-title span{
+  color: red;
+}
+
+nav{
+  display: flex;
+  padding: 10px 0;
 }
 
 h1{
@@ -56,26 +75,51 @@ a:hover{
   gap:20px;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  position: relative;
-  bottom: 0;
-  width: 90%;
-  height: 40px;
-  margin-top: 2rem;
+.toggle{
+  background-color: #000;
+  border: none;
 }
 
-footer > img{
+/* <------ */ /* FOOTER */ /* ------> */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: auto;
+}
+
+footer button{
+  background-color: red;
+  color: white;
+  border: none;
+  height: 2rem;
+}
+
+footer button:hover{
+  background-color: rgb(235, 31, 31);
+}
+
+footer > div{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20vw;
+}
+
+footer > * > * > img {
   width: 200px;
   margin: 0;
 }
-footer > p{
-  margin: 0;
-  padding-top: 0.7rem;
+
+footer .social-media{
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  gap: 8px;
+  color:rgb(7, 7, 7);
 }
+
+/* <------ */ /* FORM */ /* ------> */
 
 .form-container{
   display: flex;
@@ -84,6 +128,7 @@ footer > p{
   gap: 15px;
   align-items: center;
 }
+
 
 form{
   display: flex;
@@ -104,6 +149,7 @@ input::placeholder {
   color: rgb(7, 7, 7); /* Change the color to a visible color */
 }
 
+/* <------ */ /* CARD */ /* ------> */
 .card{
   display: flex;
   justify-content: space-around;
@@ -133,6 +179,19 @@ input::placeholder {
   margin: 0 auto;
 }
 
+.favButton{
+  background-color: rgba(136, 136, 136, 0.116);
+  padding: 10px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.favButton:hover{
+  background-color: rgb(52, 90, 216);;
+}
+
+/* <------ */ /* DETAILS */ /* ------> */
 
 table {
  border-collapse: collapse;
@@ -153,38 +212,11 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+/* <------ */ /* THEME */ /* ------> */
+
 .dark{
   background-color: #12121296;
   color: white;
-}
-
-
-/* <------ */ /* HEADER */ /* ------> */
-
-.nav-container{
-  background-color: #f2f2f2;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20vw;
-  position: sticky;
-  top: 0;
-  gap:400px;
-}
-
-.nav-item-title{
-  justify-content: start;
-  font-size: 1.5rem;
-  white-space: nowrap;
-}
-
-.nav-item-title span{
-  color: red;
-}
-
-nav{
-  display: flex;
-  padding: 10px 0;
 }
 
 .app-theme.light {
@@ -207,7 +239,11 @@ nav{
   background-color: #000000;
 }
 
-
 .app-theme.dark a{
   color: #fff;
+}
+
+.app-theme.dark .toggle{
+  background-color: #fff;
+  border: none;
 }
