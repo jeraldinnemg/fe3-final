@@ -13,20 +13,11 @@ const Navbar = () => {
     <div className='nav-container'>
       <h1 className='nav-item-title'><span>D</span>H Odonto</h1>
       <nav>
-        <div className='hamburguesa'>
-            <Link to={"/"} >Home</Link>
-            <Link to={"/contact"} >Contacto</Link>
-            <Link to={"/favs"} >Favoritos</Link>
-        </div>
-        <div id="hamburguesaToggle">
-          <input type="checkbox" />
-          <MenuIcon/>
           <div class= "menu" id="menu">
             <Link to={"/"} >Home</Link>
             <Link to={"/contact"} >Contacto</Link>
             <Link to={"/favs"} >Favoritos</Link>
           </div>
-        </div>
           <button class="toggle" onClick={handleThemeChange}>{state.theme === "light" ? "🌙" : "🌞"}</button>
       </nav>
     </div>
